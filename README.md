@@ -23,6 +23,13 @@ npm run dev
 
 브라우저에서 표시된 주소(보통 `http://localhost:5173`)로 접속합니다.
 
+## 배포 (GitHub Pages)
+
+사이트 주소: https://cmd-obam.github.io/exercise-log/
+
+`main`에 push하면 GitHub Actions가 자동으로 빌드·배포합니다.
+`vite.config.js`의 `base`는 저장소 이름과 맞춰 `/exercise-log/`로 설정되어 있습니다.
+
 ## 프로젝트 구조
 
 ```

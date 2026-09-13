@@ -1,7 +1,8 @@
 import react from '@vitejs/plugin-react'
 import { defineConfig } from 'vite'
 
-// https://vite.dev/config/
+// GitHub Pages: https://cmd-obam.github.io/exercise-log/
 export default defineConfig({
   plugins: [react()],
+  base: '/exercise-log/',
 })
