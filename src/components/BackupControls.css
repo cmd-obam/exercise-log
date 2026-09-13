@@ -1,0 +1,22 @@
+.backup-controls__title {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.backup-controls__desc {
+  margin: 0 0 14px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.backup-controls__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.backup-controls__actions .btn {
+  flex: 1;
+  min-width: 140px;
+}

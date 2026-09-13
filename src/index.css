@@ -1,0 +1,190 @@
+/* =========================================================
+   Design tokens
+   다크모드는 나중에 [data-theme="dark"] 블록만 추가하면 됩니다.
+   ========================================================= */
+
+:root {
+  --bg: #f4f6f8;
+  --bg-muted: #eef1f4;
+  --surface: #ffffff;
+  --text: #1a1f26;
+  --text-secondary: #3d4654;
+  --text-muted: #7a8494;
+  --border: #e2e7ee;
+  --accent: #0d9488;
+  --accent-soft: #ccfbf1;
+  --danger: #c0392b;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 12px rgba(16, 24, 40, 0.04);
+  --shadow-lg: 0 12px 40px rgba(16, 24, 40, 0.16);
+  --font: 'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic',
+    sans-serif;
+}
+
+/* 다크모드 예시 (나중에 활성화)
+[data-theme="dark"] {
+  --bg: #0f1419;
+  --bg-muted: #1a222c;
+  --surface: #171e26;
+  --text: #f2f5f8;
+  --text-secondary: #c4ccd6;
+  --text-muted: #8b96a5;
+  --border: #2a3440;
+  --accent: #2dd4bf;
+  --accent-soft: #134e4a;
+}
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background:
+    radial-gradient(ellipse at top, #e6fffa 0%, transparent 45%),
+    var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.45;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+/* ---- Shared UI ---- */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 48px;
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  filter: brightness(0.95);
+}
+
+.btn-secondary {
+  background: var(--bg-muted);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--border);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text);
+}
+
+.btn-ghost:hover {
+  background: var(--bg-muted);
+}
+
+.btn-text {
+  min-height: 36px;
+  padding: 6px 10px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.btn-text:hover {
+  background: var(--bg-muted);
+}
+
+.btn-text.danger {
+  color: var(--danger);
+}
+
+.btn-sm {
+  min-height: 36px;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+/* ---- Shared modal ---- */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 24, 30, 0.45);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1000;
+  padding: 16px;
+}
+
+@media (min-width: 560px) {
+  .modal-backdrop {
+    align-items: center;
+  }
+}
+
+.modal {
+  width: 100%;
+  max-width: 420px;
+  max-height: 85vh;
+  overflow: auto;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 20px;
+}
+
+.modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.modal__header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}

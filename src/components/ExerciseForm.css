@@ -1,0 +1,107 @@
+.exercise-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.exercise-form__title {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.field__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.field input {
+  flex: 1;
+  min-height: 48px;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.field input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+
+.field__unit {
+  min-width: 28px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.optional {
+  font-style: normal;
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.difficulty {
+  margin: 4px 0 0;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.difficulty legend {
+  padding: 0 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.difficulty__options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.difficulty__option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 36px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.difficulty__option input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+}
+
+.form-error {
+  margin: 0;
+  color: #c0392b;
+  font-size: 0.9rem;
+}
+
+.exercise-form__actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.exercise-form__actions .btn {
+  flex: 1;
+}

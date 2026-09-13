@@ -1,0 +1,76 @@
+.exercise-record {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg);
+}
+
+.exercise-record.is-completed {
+  opacity: 0.65;
+}
+
+.exercise-record.is-completed .exercise-record__name {
+  text-decoration: line-through;
+}
+
+.exercise-record__main {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.exercise-record__check {
+  display: flex;
+  padding-top: 2px;
+}
+
+.exercise-record__check input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.exercise-record__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.exercise-record__name {
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.exercise-record__index {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.exercise-record__summary {
+  margin-top: 4px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.exercise-record__difficulty {
+  margin-top: 4px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.exercise-record__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+}

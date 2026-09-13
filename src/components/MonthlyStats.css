@@ -1,0 +1,49 @@
+.monthly-stats__title {
+  margin: 0 0 14px;
+  font-size: 1rem;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.stat-card {
+  padding: 14px;
+  background: var(--bg-muted);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stat-card--primary {
+  background: var(--accent-soft);
+  grid-column: 1 / -1;
+}
+
+.stat-card__label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.stat-card__value {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  word-break: keep-all;
+}
+
+.stat-card--primary .stat-card__value {
+  font-size: 1.4rem;
+  color: var(--accent);
+}
+
+.monthly-stats__empty {
+  margin: 12px 0 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}

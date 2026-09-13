@@ -1,0 +1,42 @@
+.app {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 20px 16px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.app__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 4px 4px;
+}
+
+.app__eyebrow {
+  margin: 0 0 2px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.app__title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.app__footer {
+  margin-top: 8px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  line-height: 1.4;
+}

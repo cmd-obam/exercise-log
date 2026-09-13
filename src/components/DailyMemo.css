@@ -1,0 +1,30 @@
+.daily-memo__title {
+  margin: 0 0 10px;
+  font-size: 1rem;
+}
+
+.daily-memo__input {
+  width: 100%;
+  min-height: 88px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.daily-memo__input:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: var(--accent);
+}
+
+.daily-memo__actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
